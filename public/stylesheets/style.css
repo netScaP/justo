@@ -1,0 +1,185 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+#main {
+	width: 100%;
+}
+.orders {
+	width: 50%;
+	height: auto;
+	margin-left: 10%;
+	margin-top: 4%;
+}
+.orders .order {
+	border: 1px solid black;
+	width: 100%;
+	min-height: 80px;
+	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	padding: 10px 0px;
+}
+.orders .order .customerInfo {
+	float: left;
+	width: 25%;
+	height: 100%;
+	border: 1px solid black;
+	margin-right: 5%;
+	transition: 1s ease;
+}
+.orders .order .customerInfo .customerImg {
+	padding-top: 10px;
+	border-radius: 100%;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	margin: auto;
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.orders .order .customerInfo .customerName {
+	margin-top: 10px;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 20px;
+}
+.orders .order .customerText {
+	width: 95%;
+	height: auto;
+	font-size: 15px;
+	font-family: Verdana, Geneva, sans-serif;
+	transition: 1s ease;
+}
+
+.profile {
+	border: 1px solid black;
+	position: fixed;
+	right: 10%;
+	top: 0;
+	width: 20%;
+	height: 510px;
+	margin-top: 4%;
+}
+.profile .ourInfo {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+.profile .ourInfo .userImg {
+	width: 70px;
+	float: left;
+	height: 70px;
+	border-radius: 100%;
+	margin-left: 5%;
+	margin-right: 10%;
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-image: url(http://psycholekar.ru/wp-content/uploads/2017/05/agressiya-pri-depressii.jpg);
+}
+.profile .ourInfo .userName {
+	width: 70%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+.profile .keyWords {
+    border: 1px solid black;
+    width: 70%;
+    height: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.profile .keyWords .keyText {
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 10%;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.profile .keyWords .list input{
+	padding: 5px;
+	text-align: center;
+}
+.profile .keyWords .list ul {
+	width: 100%;
+	height: 70%;
+	
+	list-style-type: none;
+	margin-left: -20%;
+}
+.profile .keyWords .list ul li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 5px;
+}
+.profile .keyWords .list ul li button {
+	width: 25px;
+	height: 25px;
+	border-radius: 100%;
+	border: 0px;
+	font-size: 20px;
+	font-weight: bold;
+	transition: all 0.3s linear;
+}
+.profile .keyWords .list ul li button:hover {
+	background-color: #14bdff;
+	color: red;
+}
+
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.container:hover .customerInfo, .container:hover .customerText {
+  filter: blur(2px);
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.middle .text {
+  background-color: #4d7198;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}

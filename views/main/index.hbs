@@ -1,0 +1,50 @@
+<div id="main">
+	<div class="orders">
+		{{#each savedDat}}
+			<div class="order container">
+				<div class="customerInfo">
+					<div class="customerImg" style="background-image: url('{{this.authorImg}}');">
+					</div>
+					<div class="customerName">
+						{{this.authorName}}
+					</div>
+				</div>
+				<div class="customerText">
+					{{this.orderText}}
+				</div>
+				<div class="middle">
+					<a href='/' class="text">Написать</a>
+					<a href='https://vk.com/{{this.authorLink}}' class="text">Посмотреть профиль</a>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+	<div class="profile">
+		<div class="ourInfo">
+			<div class="userImg"></div>
+			<div class="userName">
+				<p>Khonan Doel</p> 
+			</div>
+		</div>
+		<div class="keyWords">
+			<p class="keyText">Key Words:</p>
+			<div class="list" id="todo-list-example">
+				<input
+				v-model="newTodoText"
+				v-on:keyup.enter="addNewTodo"
+				placeholder="Добавить todo"
+				class='newKey'
+				maxlength=20>
+				<ul>
+					<li
+					is="todo-item"
+					v-for="(todo, index) in todos"
+					v-bind:key="todo.id"
+					v-bind:title="todo.title"
+					v-on:remove="todos.splice(index, 1)"
+					></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

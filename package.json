@@ -1,0 +1,36 @@
+{
+  "name": "justo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "~1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.2",
+    "express-generator": "^4.15.5",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
+    "hbs": "~4.0.1",
+    "iconv-lite": "^0.4.19",
+    "morgan": "~1.9.0",
+    "needle": "^2.1.0",
+    "nightmare": "^2.10.0",
+    "node-horseman": "^3.3.0",
+    "node-vkapi": "^3.0.5",
+    "osmosis": "^1.1.5",
+    "phantomjs": "^1.9.8",
+    "raf": "^3.4.0",
+    "request": "^2.83.0",
+    "scroll-to": "0.0.2",
+    "serve-favicon": "~2.4.5",
+    "tress": "^1.0.5",
+    "tween": "^0.9.0",
+    "vksdk": "^5.3.2",
+    "vo": "^4.0.2"
+  }
+}
