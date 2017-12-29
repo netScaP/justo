@@ -172,6 +172,6 @@ function* scrap(link, bigData) {
 				};
 				bigData.push(mainData[i]);
 			};
-			fs.writeFileSync('./public//mainData.json', JSON.stringify(bigData, null, 4));
+			fs.writeFileSync('./public/mainData.json', JSON.stringify(bigData, null, 4));
 		});
 }

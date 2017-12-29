@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const expressHbs = require('express-handlebars');
 const vo = require('vo');
-const scraper = require('./scraper/scrapFunc.js');
+const scraper = require('./scraper');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
