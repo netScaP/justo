@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const expressHbs = require('express-handlebars');
 const vo = require('vo');
 const scraper = require('./scraper');
+const bigData = require('./scraper').bigData;
 
 const index = require('./routes/index');
 const users = require('./routes/users');
@@ -49,12 +50,16 @@ app.use(function(err, req, res, next) {
 vo(scraper.run)(function(err) {
 	console.dir(err);
 	console.log('done');
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.use('/', index);
 });
 
 setInterval( () => {
 	vo(scraper.run)(function(err) {
 		console.dir(err);
 		console.log('done');
+    app.use(express.static(path.join(__dirname, 'public')));
+    app.use('/', index);
 	});
 }, 1000*60*60);
 

@@ -54,6 +54,7 @@ let run = function*() {
 	
 };
 module.exports.run = run;
+module.exports.bigData = bigData;
 
 function* getContents(pathname) { //take authorImg
   var contents = yield nightmare
@@ -119,13 +120,13 @@ function* scrap(link, bigData) {
 			let wallPosts = document.getElementById('public_wall');
 			let postContents = wallPosts.getElementsByClassName('post_content');
 			for (let i = 0; i < postContents.length; i++) {
-				orderText.push(postContents[i].getElementsByClassName('wall_post_text')[0].innerHTML);
+				orderText.push(postContents[i].getElementsByClassName('wall_post_text')[0].innerHTML.replace(/<\/?[^>]+>/g,' ').replace(/Показать полностью…/g, ' '));
 
 				if (postContents[i].getElementsByClassName('wall_signed_by')[0]) {
 					authorName.push(postContents[i].getElementsByClassName('wall_signed_by')[0].innerText);
 					authorLink.push(postContents[i].getElementsByClassName('wall_signed_by')[0].getAttribute('href'));
 				} else {
-					authorName.push('/');
+					authorName.push(false);
 					authorLink.push('');
 				}
 			}

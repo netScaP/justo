@@ -1,22 +1,24 @@
 <div id="main">
 	<div class="orders">
 		{{#each savedDat}}
-			<div class="order container">
-				<div class="customerInfo">
-					<div class="customerImg" style="background-image: url('{{this.authorImg}}');">
+			{{#if this.authorLink}}
+				<div class="order container">
+					<div class="customerInfo">
+						<div class="customerImg" style="background-image: url('{{this.authorImg}}');">
+						</div>
+						<div class="customerName">
+							{{this.authorName}}
+						</div>
 					</div>
-					<div class="customerName">
-						{{this.authorName}}
+					<div class="customerText">
+						{{this.orderText}}
+					</div>
+					<div class="middle">
+						<a href='/' class="text">Написать</a>
+						<a href='https://vk.com/{{this.authorLink}}' class="text">Посмотреть профиль</a>
 					</div>
 				</div>
-				<div class="customerText">
-					{{this.orderText}}
-				</div>
-				<div class="middle">
-					<a href='/' class="text">Написать</a>
-					<a href='https://vk.com/{{this.authorLink}}' class="text">Посмотреть профиль</a>
-				</div>
-			</div>
+			{{/if}}
 		{{/each}}
 	</div>
 	<div class="profile">
