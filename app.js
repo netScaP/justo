@@ -50,7 +50,6 @@ app.use(function(err, req, res, next) {
 vo(scraper.run)(function(err) {
 	console.dir(err);
 	console.log('done');
-  app.use(express.static(path.join(__dirname, 'public')));
   app.use('/', index);
 });
 
@@ -58,7 +57,6 @@ setInterval( () => {
 	vo(scraper.run)(function(err) {
 		console.dir(err);
 		console.log('done');
-    app.use(express.static(path.join(__dirname, 'public')));
     app.use('/', index);
 	});
 }, 1000*60*60);

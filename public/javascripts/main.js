@@ -6,7 +6,7 @@ Vue.component('todo-item', {
     </li>\
   ',
   props: ['title']
-})
+});
 new Vue({
   el: '#main',
   data: {
@@ -36,4 +36,5 @@ new Vue({
       this.newTodoText = ''
     }
   }
-})
+});
+

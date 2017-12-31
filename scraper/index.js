@@ -15,11 +15,11 @@ let bigData = []; //all data here (authorImg, authorName, orderText)
 
 const prof = 'https://vk.com';
 const scrollCount = 1;
-const groupsCount = 3;
+const groupsCount = 1;
 
 const vo = require('vo'); //for generator, like 'co' in JS
 const nightmare = Nightmare({
-	show: true
+	show: false
 });
 
 let run = function*() {
