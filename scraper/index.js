@@ -124,7 +124,7 @@ function* scrap(link, bigData) {
 
 				if (postContents[i].getElementsByClassName('wall_signed_by')[0]) {
 					authorName.push(postContents[i].getElementsByClassName('wall_signed_by')[0].innerText);
-					authorLink.push(postContents[i].getElementsByClassName('wall_signed_by')[0].getAttribute('href'));
+					authorLink.push('https://vk.com' + postContents[i].getElementsByClassName('wall_signed_by')[0].getAttribute('href'));
 				} else {
 					authorName.push(false);
 					authorLink.push('');
